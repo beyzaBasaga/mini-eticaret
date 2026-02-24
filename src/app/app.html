@@ -1,5 +1,8 @@
+<!-- Structural Directives -->
+<h2>Structural Directives</h2>
 <!-- @if Örneği -->
 <h2>if Örneği</h2>
+
 @if (isLoggedIn) {
   <p>Hoş geldin, kullanıcı!</p>
 } @else {
@@ -71,4 +74,5 @@
 <hr />
 
 
-
+<button *hasRole="'admin'">Admin Paneli</button>
+<button *hasRole="'editor'">Editor Paneli</button>

@@ -10,20 +10,20 @@ import {NgClass, NgStyle} from '@angular/common';
 export class App {
   protected readonly title = signal('mini-eticaret');
 
-  // @if örneği
+  // @if örneği <= ngIf
   isLoggedIn = false;
   toggleLogin() {
     this.isLoggedIn = !this.isLoggedIn;
   }
 
-  // @for örneği
+  // @for örneği <= ngFor
   items = [
     { id: 1, name: 'Laptop', price: 15000 },
     { id: 2, name: 'Mouse', price: 300 },
     { id: 3, name: 'Klavye', price: 700 }
   ];
 
-  // @switch örneği
+  // @switch örneği <= [ngSwitch]
   status: 'loading' | 'success' | 'error' | 'idle' = 'idle';
   setStatus(newStatus: 'loading' | 'success' | 'error' | 'idle') {
     this.status = newStatus;
