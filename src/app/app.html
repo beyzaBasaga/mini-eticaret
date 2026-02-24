@@ -48,16 +48,26 @@
 <button (click)="setStatus('idle')">Idle</button>
 <hr />
 
-
-
 <!-- Attribute Directives -->
 <h2>Attribute Directives</h2>
+
+<!-- ngStyle -->
+<p [ngStyle]="{ 'color': isActive ? 'green' : 'red' }">
+  Durum: {{ isActive ? 'Aktif' : 'Pasif' }}
+</p>
 <button
-  (click)="toggleActive()"
-  [ngStyle]="{ 'background-color': isActive ? 'green' : 'gray', 'color': 'white', 'padding': '10px' }">
-  {{ isActive ? 'Aktif (ngStyle)' : 'Pasif (ngStyle)' }}
+  (click)="toggleActive()">
+  {{ 'ngStyle' }}
 </button>
 
+<!-- ngClass -->
+<p  [ngClass]="{ 'text-success': isActive2, 'text-danger': !isActive2 }">
+  Durum: {{ isActive2 ? 'Aktif' : 'Pasif' }}
+</p>
+<button
+  (click)="toggleActive2()">
+  {{ 'ngClass' }}
+</button>
 <hr />
 
 

@@ -31,9 +31,15 @@ export class App {
 
   //ngStyle örneği
   isActive = true;
-
   toggleActive()
   {
     this.isActive = !this.isActive;
+  }
+
+  //ngClass örneği
+  isActive2 = true;
+  toggleActive2()
+  {
+    this.isActive2 = !this.isActive2;
   }
 }
